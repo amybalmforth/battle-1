@@ -5,6 +5,7 @@
 <% end %>
 <br>
 <%= @game.player_1.name %>: <%= @game.player_1.hit_points%>HP
+<br>
 <%= @game.player_2.name %>: <%= @game.player_2.hit_points%>HP
 <br>
 <form action="/switch-turns" method="post">
