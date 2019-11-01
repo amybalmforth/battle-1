@@ -17,4 +17,12 @@ feature 'Attacking' do
     click_button('Attack')
     expect(page).to have_content 'Mittens attacked Dave'
   end
+  scenario 'reduce Player 1 by 10' do
+    sign_in_and_play
+    click_button('Attack')
+    click_button('Return')
+    click_button('Attack')
+    click_button('Return')
+    expect(page).to have_content 'Dave: 50HP'
+  end
 end
