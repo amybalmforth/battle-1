@@ -10,4 +10,11 @@ feature 'Attacking' do
     expect(page).not_to have_content 'Mittens: 60HP'
     expect(page).to have_content 'Mittens: 50HP'
   end
+  scenario 'see Player 1' do
+    sign_in_and_play
+    click_button('Attack')
+    click_button('Return')
+    click_button('Attack')
+    expect(page).to have_content 'Mittens attacked Dave'
+  end
 end
